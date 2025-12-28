@@ -49,7 +49,7 @@ label: "Default Noted Style"
 exampleItem: Magic shortbow (u)
 exampleItemId: 73
 */
-#define VAR_DEFAULT_NOTED_CUSTOMSTYLE backgroundColor = "#60B2A379";
+#define VAR_DEFAULT_NOTED_CUSTOMSTYLE
 
 apply (noted:true) {
     VAR_DEFAULT_NOTED_CUSTOMSTYLE 
@@ -226,7 +226,7 @@ type: number
 label: Hide non-stackable items below this value
 group: Value-Based
 */
-#define VAR_GLOBAL_NON_STACKABLE_MINIMUM_VALUE 1000
+#define VAR_GLOBAL_NON_STACKABLE_MINIMUM_VALUE 0
 
 apply ((tradeable:true || name:CONST_GLOBAL_TRADEABLE_NON_TRADEABLE_ITEMS) && stackable:false && noted:false && value:<VAR_GLOBAL_NON_STACKABLE_MINIMUM_VALUE) {
     hidden = true;
@@ -12082,6 +12082,26 @@ apply (name:"Dragon spear" && quantity:==1) {
 }
 
 
+/*@ define:module:noted_overrides
+---
+name: Noted Overrides
+subtitle: The last layer of styling items
+description: |
+  This includes a style to apply after all the above rules.
+*/
+
+
+/*@ define:input:default_styling
+type: style
+label: "Override Noted Style"
+exampleItem: Magic shortbow (u)
+exampleItemId: 73
+*/
+#define VAR_OVERRIDE_NOTED_CUSTOMSTYLE icon = Item(799);
+
+apply (noted:true) {
+    VAR_OVERRIDE_NOTED_CUSTOMSTYLE
+}
 
 /*@ define:module:utilities
 ---
