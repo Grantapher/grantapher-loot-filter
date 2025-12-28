@@ -9,6 +9,7 @@ meta { name = "Grant's filter"; description = "Offers an original color scheme w
 
 
 
+
 /*@ define:module:default_styling
 ---
 name: Default Styling
@@ -132,6 +133,7 @@ apply (name:VAR_GLOBAL_SHOW_ICONS_ITEMLIST) {
 }
 
 
+
 /*@ define:module:sorting
 ---
 name: Sorting
@@ -165,6 +167,7 @@ type: stringlist
 label: Items to always show first
 */
 #define VAR_MENU_SORT_ITEMS_FIRST []
+
 
 
 /*@ define:module:filtering
@@ -2471,7 +2474,7 @@ type: number
 label: Copper ore minimum quantity
 group: Ores
 */
-#define VAR_COPPER_ORE_MIN_QUANTITY 0
+#define VAR_COPPER_ORE_MIN_QUANTITY 10
 
 apply (name:"copper ore" && quantity:<VAR_COPPER_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2482,7 +2485,7 @@ type: number
 label: Tin ore minimum quantity
 group: Ores
 */
-#define VAR_TIN_ORE_MIN_QUANTITY 0
+#define VAR_TIN_ORE_MIN_QUANTITY 10
 
 apply (name:"tin ore" && quantity:<VAR_TIN_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2493,7 +2496,7 @@ type: number
 label: Iron ore minimum quantity
 group: Ores
 */
-#define VAR_IRON_ORE_MIN_QUANTITY 0
+#define VAR_IRON_ORE_MIN_QUANTITY 2
 
 apply (name:"iron ore" && quantity:<VAR_IRON_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2504,7 +2507,7 @@ type: number
 label: Silver ore minimum quantity
 group: Ores
 */
-#define VAR_SILVER_ORE_MIN_QUANTITY 0
+#define VAR_SILVER_ORE_MIN_QUANTITY 5
 
 apply (name:"silver ore" && quantity:<VAR_SILVER_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2515,7 +2518,7 @@ type: number
 label: Coal minimum quantity
 group: Ores
 */
-#define VAR_COAL_ORE_MIN_QUANTITY 0
+#define VAR_COAL_ORE_MIN_QUANTITY 2
 
 apply (name:"coal" && quantity:<VAR_COAL_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2526,7 +2529,7 @@ type: number
 label: Gold ore minimum quantity
 group: Ores
 */
-#define VAR_GOLD_ORE_MIN_QUANTITY 0
+#define VAR_GOLD_ORE_MIN_QUANTITY 2
 
 apply (name:"gold ore" && quantity:<VAR_GOLD_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2537,7 +2540,7 @@ type: number
 label: Mithril ore minimum quantity
 group: Ores
 */
-#define VAR_MITHRIL_ORE_MIN_QUANTITY 0
+#define VAR_MITHRIL_ORE_MIN_QUANTITY 2
 
 apply (name:"mithril ore" && quantity:<VAR_MITHRIL_ORE_MIN_QUANTITY) {
     hidden = true;
@@ -2833,7 +2836,7 @@ type: number
 label: Logs minimum quantity
 group: Logs
 */
-#define VAR_LOGS_MIN_QUANTITY 0
+#define VAR_LOGS_MIN_QUANTITY 2
 
 /*@ define:input:logs
 type: number
@@ -3149,7 +3152,7 @@ enum: [
   "Dragonfruit tree seed"
 ]
 */
-#define VAR_FARMING_SEEDS_FRUIT_TREE_HIDE ["Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed","Pineapple seed"]
+#define VAR_FARMING_SEEDS_FRUIT_TREE_HIDE ["Apple tree seed","Banana tree seed","Orange tree seed","Curry tree seed"]
 
 apply (name:VAR_FARMING_SEEDS_FRUIT_TREE_HIDE) {
     hidden = true;
@@ -3169,7 +3172,7 @@ enum: [
   "Redwood tree seed"
 ]
 */
-#define VAR_FARMING_SEEDS_SPECIAL_TREE_HIDE ["Teak seed","Mahogany seed","Calquat tree seed"]
+#define VAR_FARMING_SEEDS_SPECIAL_TREE_HIDE ["Teak seed"]
 
 apply (name:VAR_FARMING_SEEDS_SPECIAL_TREE_HIDE) {
     hidden = true;
@@ -3941,6 +3944,7 @@ apply ((name:CONST_RUNE_ONE_HANDED_MELEE_WEAPONS || name:CONST_RUNE_TWO_HANDED_M
 apply ((name:CONST_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:CONST_DRAGON_TWO_HANDED_MELEE_WEAPONS || name:CONST_DRAGON_RANGED_WEAPONS || name:CONST_DRAGON_AMMO || name:CONST_DRAGON_ARMOUR) && name:VAR_METAL_EQUIPMENT_TIERS_HIDE && !name:CONST_DEFENDERS_LIST) {
     hidden = true;
 }
+
 
 
 /*@ define:module:area_based_filtering
@@ -4762,7 +4766,7 @@ enum: [
   "Steel arrow"
 ]
 */
-#define VAR_BOSSING_KREEARRA_COMMON_HIDE ["Feather","Black d'hide body","Rune crossbow","Mind rune","Rune arrow","Runite bolts","Crystal key","Steel dart","Steel arrow"]
+#define VAR_BOSSING_KREEARRA_COMMON_HIDE ["Feather","Black d'hide body","Rune crossbow","Mind rune","Rune arrow","Runite bolts","Steel dart","Steel arrow"]
 
 /*@ define:input:bossing
 type: enumlist
@@ -5125,7 +5129,7 @@ enum: [
   "Slayer's enchantment"
 ]
 */
-#define VAR_SLAYER_WILDERNESS_SLAYER_HIDE ["Slayer's enchantment"]
+#define VAR_SLAYER_WILDERNESS_SLAYER_HIDE []
 
 /*@ define:input:slayer
 type: enumlist
@@ -5271,7 +5275,7 @@ enum: [
   "Ugthanki kebab"
 ]
 */
-#define VAR_SLAYER_SMOKE_DEVIL_COMMON_HIDE ["Adamant battleaxe","Adamantite bar","Air rune","Ashes","Coal","Coins","Crossbow string","Fire rune","Mithril plateskirt","Red d'hide body","Rune arrow","Runite bolts","Shark","Steel bar","Ugthanki kebab"]
+#define VAR_SLAYER_SMOKE_DEVIL_COMMON_HIDE ["Adamantite bar","Air rune","Ashes","Coal","Coins","Crossbow string","Fire rune","Mithril plateskirt","Red d'hide body","Rune arrow","Runite bolts","Shark","Steel bar","Ugthanki kebab"]
 
 /*@ define:input:slayer
 type: enumlist
@@ -5851,6 +5855,7 @@ apply (area:CONST_BOUNTY_HUNTER_AREA && name:VAR_BOUNTY_HUNTER_HIDDEN_LIST) {
 }
 
 
+
 /*@ define:module:item_tiers
 ---
 name: Item tiers
@@ -6011,6 +6016,7 @@ rule (VAR_VALUES_TIER_4_TERMINATE && ((value:>=VAR_VALUES_TIER_4_VALUE) || name:
 
 
 
+
 /*@ define:module:uniques
 ---
 name: Uniques
@@ -6064,6 +6070,7 @@ group: Power User
 rule (VAR_UNIQUES_TERMINATE && name:VAR_UNIQUES_LIST) {}
 
 
+
 /*@ define:module:alchs
 ---
 name: Alchs
@@ -6113,6 +6120,7 @@ group: Power User
 #define VAR_ALCHS_TERMINATE false
 
 rule (VAR_ALCHS_TERMINATE && name:VAR_ALCHS_ITEM_LIST) {}
+
 
 
 /*@ define:module:item_category_styles
@@ -7360,6 +7368,7 @@ exampleItem: Gilded platelegs
 apply (name:CONST_RUNE_GILDED) {
     VAR_RUNE_GILDED_CUSTOMSTYLE 
 }
+
 
 
 /*@ define:module:individual_item_styles
@@ -11976,6 +11985,7 @@ apply (area:CONST_GAUNTLET_AREA && name:"* legs *") {
 }
 
 
+
 /*@ define:module:rare_drop_table
 ---
 name: Rare Drop Table Style
@@ -12082,6 +12092,7 @@ apply (name:"Dragon spear" && quantity:==1) {
 }
 
 
+
 /*@ define:module:noted_overrides
 ---
 name: Noted Overrides
@@ -12102,6 +12113,7 @@ exampleItemId: 73
 apply (noted:true) {
     VAR_OVERRIDE_NOTED_CUSTOMSTYLE
 }
+
 
 /*@ define:module:utilities
 ---
@@ -12184,6 +12196,7 @@ apply (VAR_SILENCE_HIDE_SPAWN_ITEMS && ownership:OWNERSHIP_NONE) {
     sound = 2411; // sound name: silence
     notify = false;
 }
+
 
 
 /*@ define:module:final
@@ -12970,6 +12983,7 @@ apply (VAR_SORTING_MENU_SORT_UNTRADEABLE_FIRST && tradeable:false && value:>=200
 apply (name:VAR_MENU_SORT_ITEMS_FIRST) {
     menuSort = 300;
 }
+
 
 
 /*@ define:module:constants
