@@ -201,6 +201,16 @@ apply (name:VAR_GLOBAL_SHOW) {
     hidden = false;
 }
 
+/*@ define:input:filtering
+type: stringlist
+label: Items to hide unless noted
+group: Individual Items
+*/
+#define VAR_GLOBAL_HIDE_UNLESS_NOTED []
+
+apply (name:VAR_GLOBAL_HIDE_UNLESS_NOTED && noted:false) {
+    hidden = true;
+}
 
 /*@ define:input:filtering
 type: number
@@ -12208,6 +12218,9 @@ name: final
 /* --- hiding and showing specific items --- */
 
 apply (name:VAR_GLOBAL_HIDE) {
+    hidden = true;
+}
+apply (name:VAR_GLOBAL_HIDE_UNLESS_NOTED && noted:false) {
     hidden = true;
 }
 apply (name:VAR_GLOBAL_SHOW) {
