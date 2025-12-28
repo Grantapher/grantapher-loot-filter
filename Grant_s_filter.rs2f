@@ -206,7 +206,7 @@ type: stringlist
 label: Items to hide unless noted
 group: Individual Items
 */
-#define VAR_GLOBAL_HIDE_UNLESS_NOTED []
+#define VAR_GLOBAL_HIDE_UNLESS_NOTED ["Air talisman","Water talisman","Earth talisman","Fire talisman"]
 
 apply (name:VAR_GLOBAL_HIDE_UNLESS_NOTED && noted:false) {
     hidden = true;
