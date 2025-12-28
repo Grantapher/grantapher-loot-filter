@@ -8,6 +8,7 @@ name: header
 meta { name = "Grant's filter"; description = "Offers an original color scheme with extensive support for category-based styling/filtering."; }
 
 
+
 /*@ define:module:default_styling
 ---
 name: Default Styling
@@ -130,6 +131,7 @@ apply (name:VAR_GLOBAL_SHOW_ICONS_ITEMLIST) {
     icon = CurrentItem();
 }
 
+
 /*@ define:module:sorting
 ---
 name: Sorting
@@ -163,6 +165,7 @@ type: stringlist
 label: Items to always show first
 */
 #define VAR_MENU_SORT_ITEMS_FIRST []
+
 
 /*@ define:module:filtering
 ---
@@ -945,7 +948,7 @@ type: number
 label: Standard Arrows minimum value
 group: Ammo
 */
-#define VAR_AMMO_STANDARD_ARROWS_MIN_VALUE 500
+#define VAR_AMMO_STANDARD_ARROWS_MIN_VALUE 200
 
 apply (name:CONST_AMMO_STANDARD_ARROWS_LIST && (name:VAR_AMMO_STANDARD_ARROWS_HIDE || value:<VAR_AMMO_STANDARD_ARROWS_MIN_VALUE)) {
     hidden = true;
@@ -1005,7 +1008,7 @@ type: number
 label: Darts minimum value
 group: Ammo
 */
-#define VAR_AMMO_DARTS_MIN_VALUE 500
+#define VAR_AMMO_DARTS_MIN_VALUE 200
 
 apply (name:CONST_AMMO_DARTS_LIST && (name:VAR_AMMO_DARTS_HIDE || value:<VAR_AMMO_DARTS_MIN_VALUE)) {
     hidden = true;
@@ -1061,7 +1064,7 @@ type: number
 label: Bolts minimum value
 group: Ammo
 */
-#define VAR_AMMO_BOLTS_MIN_VALUE 500
+#define VAR_AMMO_BOLTS_MIN_VALUE 300
 
 apply (name:CONST_AMMO_BOLTS_LIST && (name:VAR_AMMO_BOLTS_HIDE || value:<VAR_AMMO_BOLTS_MIN_VALUE)) {
     hidden = true;
@@ -1121,7 +1124,7 @@ type: number
 label: Enchanted bolts minimum value
 group: Ammo
 */
-#define VAR_AMMO_BOLTS_E_MIN_VALUE 500
+#define VAR_AMMO_BOLTS_E_MIN_VALUE 200
 
 apply (name:CONST_AMMO_BOLTS_E_LIST && (name:VAR_AMMO_BOLTS_E_HIDE || value:<VAR_AMMO_BOLTS_E_MIN_VALUE)) {
     hidden = true;
@@ -1181,7 +1184,7 @@ type: number
 label: Dragon enchanted bolts minimum value
 group: Ammo
 */
-#define VAR_AMMO_DRAGON_BOLTS_E_MIN_VALUE 500
+#define VAR_AMMO_DRAGON_BOLTS_E_MIN_VALUE 200
 
 apply (name:CONST_AMMO_DRAGON_BOLTS_E_LIST && (name:VAR_AMMO_DRAGON_BOLTS_E_HIDE || value:<VAR_AMMO_DRAGON_BOLTS_E_MIN_VALUE)) {
     hidden = true;
@@ -1208,7 +1211,7 @@ type: number
 label: Javelins minimum value
 group: Ammo
 */
-#define VAR_AMMO_JAVELINS_MIN_VALUE 500
+#define VAR_AMMO_JAVELINS_MIN_VALUE 1000
 
 apply (name:CONST_AMMO_JAVELINS_LIST && (name:VAR_AMMO_JAVELINS_HIDE || value:<VAR_AMMO_JAVELINS_MIN_VALUE)) {
     hidden = true;
@@ -1253,14 +1256,14 @@ enum: [
   }
 ]
 */
-#define VAR_AMMO_SPECIAL_BOLTS_HIDE []
+#define VAR_AMMO_SPECIAL_BOLTS_HIDE ["Kebbit bolts","Long kebbit bolts","Bone bolts"]
 
 /*@ define:input:ammo
 type: number
 label: Special bolts minimum value
 group: Ammo
 */
-#define VAR_AMMO_SPECIAL_BOLTS_MIN_VALUE 0
+#define VAR_AMMO_SPECIAL_BOLTS_MIN_VALUE 100
 
 apply (name:CONST_AMMO_SPECIAL_BOLTS_LIST && (name:VAR_AMMO_SPECIAL_BOLTS_HIDE || value:<VAR_AMMO_SPECIAL_BOLTS_MIN_VALUE)) {
     hidden = true;
@@ -1308,7 +1311,7 @@ type: number
 label: Brutal Arrows minimum value
 group: Ammo
 */
-#define VAR_AMMO_BRUTAL_ARROWS_MIN_VALUE 500
+#define VAR_AMMO_BRUTAL_ARROWS_MIN_VALUE 100
 
 apply (name:CONST_AMMO_BRUTAL_ARROWS_LIST && (name:VAR_AMMO_BRUTAL_ARROWS_HIDE || value:<VAR_AMMO_BRUTAL_ARROWS_MIN_VALUE)) {
     hidden = true;
@@ -1332,7 +1335,7 @@ type: number
 label: Special Arrows minimum value
 group: Ammo
 */
-#define VAR_AMMO_SPECIAL_ARROWS_MIN_VALUE 500
+#define VAR_AMMO_SPECIAL_ARROWS_MIN_VALUE 100
 
 apply (name:CONST_AMMO_SPECIAL_ARROWS_LIST && (name:VAR_AMMO_SPECIAL_ARROWS_HIDE || value:<VAR_AMMO_SPECIAL_ARROWS_MIN_VALUE)) {
     hidden = true;
@@ -3939,6 +3942,7 @@ apply ((name:CONST_DRAGON_ONE_HANDED_MELEE_WEAPONS || name:CONST_DRAGON_TWO_HAND
     hidden = true;
 }
 
+
 /*@ define:module:area_based_filtering
 ---
 name: Area-Based Filtering
@@ -5846,6 +5850,7 @@ apply (area:CONST_BOUNTY_HUNTER_AREA && name:VAR_BOUNTY_HUNTER_HIDDEN_LIST) {
     hidden = true;
 }
 
+
 /*@ define:module:item_tiers
 ---
 name: Item tiers
@@ -6005,6 +6010,7 @@ rule (VAR_VALUES_TIER_3_TERMINATE && ((value:>=VAR_VALUES_TIER_3_VALUE && value:
 rule (VAR_VALUES_TIER_4_TERMINATE && ((value:>=VAR_VALUES_TIER_4_VALUE) || name:VAR_VALUES_TIER_4_SHOW)) {}
 
 
+
 /*@ define:module:uniques
 ---
 name: Uniques
@@ -6057,6 +6063,7 @@ group: Power User
 
 rule (VAR_UNIQUES_TERMINATE && name:VAR_UNIQUES_LIST) {}
 
+
 /*@ define:module:alchs
 ---
 name: Alchs
@@ -6106,6 +6113,7 @@ group: Power User
 #define VAR_ALCHS_TERMINATE false
 
 rule (VAR_ALCHS_TERMINATE && name:VAR_ALCHS_ITEM_LIST) {}
+
 
 /*@ define:module:item_category_styles
 ---
@@ -7352,6 +7360,7 @@ exampleItem: Gilded platelegs
 apply (name:CONST_RUNE_GILDED) {
     VAR_RUNE_GILDED_CUSTOMSTYLE 
 }
+
 
 /*@ define:module:individual_item_styles
 ---
@@ -11966,6 +11975,7 @@ apply (area:CONST_GAUNTLET_AREA && name:"* legs *") {
     VAR_GAUNTLET_CRYSTAL_LEGS_CUSTOMSTYLE 
 }
 
+
 /*@ define:module:rare_drop_table
 ---
 name: Rare Drop Table Style
@@ -12072,6 +12082,7 @@ apply (name:"Dragon spear" && quantity:==1) {
 }
 
 
+
 /*@ define:module:utilities
 ---
 name: Utilities
@@ -12153,6 +12164,7 @@ apply (VAR_SILENCE_HIDE_SPAWN_ITEMS && ownership:OWNERSHIP_NONE) {
     sound = 2411; // sound name: silence
     notify = false;
 }
+
 
 /*@ define:module:final
 hidden: true
@@ -12938,6 +12950,7 @@ apply (VAR_SORTING_MENU_SORT_UNTRADEABLE_FIRST && tradeable:false && value:>=200
 apply (name:VAR_MENU_SORT_ITEMS_FIRST) {
     menuSort = 300;
 }
+
 
 /*@ define:module:constants
 hidden: true
