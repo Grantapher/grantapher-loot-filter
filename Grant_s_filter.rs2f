@@ -1263,7 +1263,7 @@ type: number
 label: Special bolts minimum value
 group: Ammo
 */
-#define VAR_AMMO_SPECIAL_BOLTS_MIN_VALUE 100
+#define VAR_AMMO_SPECIAL_BOLTS_MIN_VALUE 10
 
 apply (name:CONST_AMMO_SPECIAL_BOLTS_LIST && (name:VAR_AMMO_SPECIAL_BOLTS_HIDE || value:<VAR_AMMO_SPECIAL_BOLTS_MIN_VALUE)) {
     hidden = true;
