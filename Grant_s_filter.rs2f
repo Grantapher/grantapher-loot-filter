@@ -36,10 +36,10 @@ label: "Default Stackable Style"
 exampleItem: Purple Sweet
 exampleItemId: 10476
 */
-#define VAR_DEFAULT_STACKABLE_NOTED_CUSTOMSTYLE
+#define VAR_DEFAULT_STACKABLE_CUSTOMSTYLE
 
 apply (stackable:true) {
-    VAR_DEFAULT_STACKABLE_NOTED_CUSTOMSTYLE 
+    VAR_DEFAULT_STACKABLE_CUSTOMSTYLE 
 }
 
 /*@ define:input:default_styling
@@ -48,10 +48,10 @@ label: "Default Noted Style"
 exampleItem: Magic shortbow (u)
 exampleItemId: 73
 */
-#define VAR_DEFAULT_STACKABLE_NOTED_CUSTOMSTYLE backgroundColor = "#60B2A379";
+#define VAR_DEFAULT_NOTED_CUSTOMSTYLE backgroundColor = "#60B2A379";
 
 apply (noted:true) {
-    VAR_DEFAULT_STACKABLE_NOTED_CUSTOMSTYLE 
+    VAR_DEFAULT_NOTED_CUSTOMSTYLE 
 }
 
 /*@ define:input:default_styling
