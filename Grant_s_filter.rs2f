@@ -224,6 +224,13 @@ apply (name:VAR_GLOBAL_SHOW_IF_NOTED && noted:true) {
 }
 
 /*@ define:input:filtering
+type: boolean
+label: Show all noted Items (unless in "Items to hide")
+group: Individual Items
+*/
+#define VAR_GLOBAL_SHOW_NOTED true
+
+/*@ define:input:filtering
 type: number
 label: Hide items below this value
 group: Value-Based
@@ -12239,6 +12246,9 @@ apply (name:VAR_GLOBAL_SHOW) {
     hidden = false;
 }
 apply (name:VAR_GLOBAL_SHOW_IF_NOTED && noted:true) {
+    hidden = false;
+}
+apply (VAR_GLOBAL_SHOW_NOTED && noted:true && !name:VAR_GLOBAL_HIDE) {
     hidden = false;
 }
 
