@@ -213,6 +213,17 @@ apply (name:VAR_GLOBAL_HIDE_UNLESS_NOTED && noted:false) {
 }
 
 /*@ define:input:filtering
+type: stringlist
+label: Items to show if noted
+group: Individual Items
+*/
+#define VAR_GLOBAL_SHOW_IF_NOTED ["Big bones"]
+
+apply (name:VAR_GLOBAL_SHOW_IF_NOTED && noted:true) {
+    hidden = false;
+}
+
+/*@ define:input:filtering
 type: number
 label: Hide items below this value
 group: Value-Based
@@ -12225,6 +12236,9 @@ apply (name:VAR_GLOBAL_HIDE_UNLESS_NOTED && noted:false) {
     hidden = true;
 }
 apply (name:VAR_GLOBAL_SHOW) {
+    hidden = false;
+}
+apply (name:VAR_GLOBAL_SHOW_IF_NOTED && noted:true) {
     hidden = false;
 }
 
