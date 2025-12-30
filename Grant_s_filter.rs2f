@@ -5884,6 +5884,27 @@ apply (area:CONST_BOUNTY_HUNTER_AREA && name:VAR_BOUNTY_HUNTER_HIDDEN_LIST) {
     hidden = true;
 }
 
+/*@ define:input:area_based_filtering
+type: stringlist
+label: Forthos Dungeon force shown
+group: Forthos Dungeon
+*/
+#define VAR_FORTHOS_DUNGEON_SHOW []
+
+/*@ define:input:bossing
+type: stringlist
+label: Forthos Dungeon force hidden
+group: Forthos Dungeon
+*/
+#define VAR_FORTHOS_DUNGEON_HIDE ["Babydragon bones"]
+
+apply (area:CONST_FORTHOS_DUNGEON_AREA && name:VAR_FORTHOS_DUNGEON_HIDE) {
+    hidden = true;
+}
+
+apply (area:CONST_FORTHOS_DUNGEON_AREA && name:VAR_FORTHOS_DUNGEON_SHOW) {
+    hidden = false;
+}
 
 
 /*@ define:module:item_tiers
@@ -13128,6 +13149,8 @@ name: Constants
 #define CONST_ARDY_MARKET_CHEST_AREA [2672, 3305, 0, 2678, 3312, 0]
 #define CONST_COLO_LOBBY_AREA [1794, 9479, 0, 1856, 9538, 0]
 #define CONST_LUMBRIDGE_BASEMENT_CAVE_EXIT_AREA [3206, 9600, 0, 3237, 9628, 0]
+
+#define CONST_FORTHOS_DUNGEON_AREA [1778, 9877, 0, 1872, 9998, 0]
 
 #define CONST_CLUE_HARD_WILDY_IDS [   2723,   2725,   2727,   2729,   2731,   2733,   2735,   2737,   2739,   2741,   2743,   2745,   2747,   2786,   2788,   3525,   3556,   3558,   7239,   7260,   7262,   7264,   10244,   10234,   12546,   12564,   19888,   23168,   23169, ]
 
