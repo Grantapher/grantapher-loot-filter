@@ -6192,7 +6192,7 @@ group: Currency
 exampleItem: Coins
 exampleItemId: 1004
 */
-#define VAR_CURRENCY_CUSTOMSTYLE textColor = "#FFBEB287";
+#define VAR_CURRENCY_CUSTOMSTYLE textColor = "#FFBEB287";icon = Item(617);
 
 apply (name:CONST_CURRENCY_LIST) {
     VAR_CURRENCY_CUSTOMSTYLE 
