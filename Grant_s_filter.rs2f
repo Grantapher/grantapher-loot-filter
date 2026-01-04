@@ -5906,6 +5906,17 @@ apply (area:CONST_FORTHOS_DUNGEON_AREA && name:VAR_FORTHOS_DUNGEON_SHOW) {
     hidden = false;
 }
 
+/*@ define:input:area_based_filtering
+type: stringlist
+label: Hide on Player's boat
+group: Player Boat
+*/
+#define VAR_PLAYER_BOAT_HIDE ["Belladonna seed", "Poison ivy seed", "Cactus seed", "Potato cactus seed", "Snape grass seed", "Opal", "Jade", "Red topaz", "Silver ore", "Silver bar", "Tiara", "Jug of wine", "Spice", "Grey wolf fur", "Silk", "Nature talisman", "Chaos talisman", "Rune javelin", "Crushed gem"]
+
+apply (area:CONST_PLAYER_BOAT_AREA && name:VAR_PLAYER_BOAT_HIDE) {
+    hidden = true;
+}
+
 
 /*@ define:module:item_tiers
 ---
@@ -13151,6 +13162,8 @@ name: Constants
 #define CONST_LUMBRIDGE_BASEMENT_CAVE_EXIT_AREA [3206, 9600, 0, 3237, 9628, 0]
 
 #define CONST_FORTHOS_DUNGEON_AREA [1778, 9877, 0, 1872, 9998, 0]
+
+#define CONST_PLAYER_BOAT_AREA [3838, 6432, 0, 3896, 6465, 3]
 
 #define CONST_CLUE_HARD_WILDY_IDS [   2723,   2725,   2727,   2729,   2731,   2733,   2735,   2737,   2739,   2741,   2743,   2745,   2747,   2786,   2788,   3525,   3556,   3558,   7239,   7260,   7262,   7264,   10244,   10234,   12546,   12564,   19888,   23168,   23169, ]
 
