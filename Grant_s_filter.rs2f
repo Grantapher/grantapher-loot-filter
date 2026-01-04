@@ -12046,6 +12046,17 @@ apply (area:CONST_GAUNTLET_AREA && name:"* legs *") {
     VAR_GAUNTLET_CRYSTAL_LEGS_CUSTOMSTYLE 
 }
 
+/*@ define:input:individual_item_styles
+type: style
+label: Seaweed spore custom style
+group: Seed Styles
+exampleItem: Seaweed spore
+*/
+#define VAR_SEAWEED_SPORE_CUSTOMSTYLE
+
+apply (area:CONST_FOSSIL_ISLAND_UNDERWATER_AREA && name:"Seaweed spore") {
+    VAR_SEAWEED_SPORE_CUSTOMSTYLE 
+}
 
 
 /*@ define:module:rare_drop_table
@@ -13168,6 +13179,8 @@ name: Constants
 #define CONST_OPULENT_SALVAGE_WEST_AREA [1023, 2930, 0, 1116, 3000, 0]
 
 #define CONST_PLAYER_BOAT_AREA [3838, 6432, 0, 3896, 6465, 3]
+
+#define CONST_FOSSIL_ISLAND_UNDERWATER_AREA [3714, 10239, 0, 3840, 10305, 3]
 
 #define CONST_CLUE_HARD_WILDY_IDS [   2723,   2725,   2727,   2729,   2731,   2733,   2735,   2737,   2739,   2741,   2743,   2745,   2747,   2786,   2788,   3525,   3556,   3558,   7239,   7260,   7262,   7264,   10244,   10234,   12546,   12564,   19888,   23168,   23169, ]
 
