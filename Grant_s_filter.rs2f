@@ -12052,7 +12052,7 @@ label: Seaweed spore custom style
 group: Seed Styles
 exampleItem: Seaweed spore
 */
-#define VAR_SEAWEED_SPORE_CUSTOMSTYLE
+#define VAR_SEAWEED_SPORE_CUSTOMSTYLE backgroundColor = "#5062a671";lootbeamColor = "#FF62a671";showLootbeam = true;sound = 2310;icon = CurrentItem();
 
 apply (area:CONST_FOSSIL_ISLAND_UNDERWATER_AREA && name:"Seaweed spore") {
     VAR_SEAWEED_SPORE_CUSTOMSTYLE 
