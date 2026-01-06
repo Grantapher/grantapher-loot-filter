@@ -5921,6 +5921,16 @@ apply (area:CONST_PLAYER_BOAT_AREA && name:VAR_PLAYER_BOAT_HIDE) {
     hidden = true;
 }
 
+/*@ define:input:area_based_filtering
+type: stringlist
+label: Hide in Maniacal Monkey Lair
+group: Maniacal monkeys
+*/
+#define VAR_MANIACAL_MONKEY_HIDE ["Small ninja monkey bones", "Steel scimitar", "Maple shortbow", "Oak plank", "Grimy guam leaf", "Bass", "Banana", "Antipoison(2)", "Adamant arrow(p++)", "Rope", ]
+
+apply (area:CONST_MANIACAL_MONKEY_AREA && name:VAR_MANIACAL_MONKEY_HIDE) {
+    hidden = true;
+}
 
 
 /*@ define:module:item_tiers
@@ -13193,6 +13203,8 @@ name: Constants
 #define CONST_OPULENT_SALVAGE_WEST_AREA [1023, 2930, 0, 1116, 3000, 0]
 
 #define CONST_PLAYER_BOAT_AREA [3838, 6432, 0, 3896, 6465, 3]
+
+#define CONST_MANIACAL_MONKEY_AREA [2304, 9128, 0, 2467, 9280, 3]
 
 #define CONST_FOSSIL_ISLAND_UNDERWATER_AREA [3714, 10239, 0, 3840, 10305, 3]
 
