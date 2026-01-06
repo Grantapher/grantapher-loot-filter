@@ -5926,7 +5926,7 @@ type: stringlist
 label: Hide in Maniacal Monkey Lair
 group: Maniacal monkeys
 */
-#define VAR_MANIACAL_MONKEY_HIDE ["Small ninja monkey bones", "Steel scimitar", "Maple shortbow", "Oak plank", "Grimy guam leaf", "Bass", "Banana", "Antipoison(2)", "Adamant arrow(p++)", "Rope", ]
+#define VAR_MANIACAL_MONKEY_HIDE ["Small ninja monkey bones", "Steel scimitar", "Maple shortbow", "Oak plank", "Grimy guam leaf", "Bass", "Banana", "Antipoison(2)", "Adamant arrow(p++)", "Rope", "Vial", ]
 
 apply (area:CONST_MANIACAL_MONKEY_AREA && name:VAR_MANIACAL_MONKEY_HIDE) {
     hidden = true;
