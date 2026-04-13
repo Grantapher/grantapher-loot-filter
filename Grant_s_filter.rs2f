@@ -5932,6 +5932,17 @@ apply (area:CONST_MANIACAL_MONKEY_AREA && name:VAR_MANIACAL_MONKEY_HIDE) {
     hidden = true;
 }
 
+/*@ define:input:area_based_filtering
+type: stringlist
+label: Hide in Dagannoth Kings' Lair
+group: Dagannoth Kings
+*/
+#define VAR_DAGANNOTH_KINGS_HIDE ["Dagannoth hide", "Fremennik shield", "Fremennik blade", "Fremennik helm", "Coins", "Steel kiteshield", "Mithril warhammer", "Adamant axe", "Steel platebody", "Mithril pickaxe", "Adamantite bar", "Adamant platebody", "Mithril 2h sword", "Ring of life", "Rock-shell plate", "Rock-shell legs", "Earth battlestaff", "Air rune", "Water battlestaff", "Earth rune", "Oyster pearls", "Pure essence", "Air battlestaff", "Nature rune", "Mud rune", "Skeletal top", "Skeletal bottoms", "Mithril knife", "Red d'hide vambraces", "Steel arrow", "Runite bolts", "Iron arrow", "Seercull", "Spined body", "Spined chaps", "Cosmic talisman", ]
+
+apply (area:CONST_DAGANNOTH_KINGS_AREA && name:VAR_DAGANNOTH_KINGS_HIDE) {
+    hidden = true;
+}
+
 
 /*@ define:module:item_tiers
 ---
@@ -13205,6 +13216,8 @@ name: Constants
 #define CONST_PLAYER_BOAT_AREA [3838, 6432, 0, 3896, 6465, 3]
 
 #define CONST_MANIACAL_MONKEY_AREA [2304, 9128, 0, 2467, 9280, 3]
+
+#define CONST_DAGANNOTH_KINGS_AREA [2890, 4360, 0, 2938, 4474, 3]
 
 #define CONST_FOSSIL_ISLAND_UNDERWATER_AREA [3714, 10239, 0, 3840, 10305, 3]
 
