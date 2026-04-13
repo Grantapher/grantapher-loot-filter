@@ -5915,7 +5915,7 @@ type: stringlist
 label: Hide on Player's boat
 group: Player Boat
 */
-#define VAR_PLAYER_BOAT_HIDE ["Belladonna seed","Poison ivy seed","Cactus seed","Potato cactus seed","Snape grass seed","Opal","Jade","Red topaz","Silver ore","Silver bar","Tiara","Jug of wine","Spice","Grey wolf fur","Silk","Nature talisman","Chaos talisman","Rune javelin","Crushed gem"]
+#define VAR_PLAYER_BOAT_HIDE ["Toadflax seed","Irit seed","Belladonna seed","Poison ivy seed","Avantoe seed","Cactus seed","Potato cactus seed","Kwuarm seed","Cadantine seed","Lantadyme seed","Snape grass seed","Dwarf weed seed","Opal","Jade","Red topaz","Silver ore","Silver bar","Tiara","Jug of wine","Spice","Grey wolf fur","Silk","Nature talisman","Chaos talisman","Rune javelin","Crushed gem"]
 
 apply (area:CONST_PLAYER_BOAT_AREA && name:VAR_PLAYER_BOAT_HIDE) {
     hidden = true;
